@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns = "http://www.w3.org/ns/widgets"
     xmlns:gap = "http://phonegap.com/ns/1.0"
-    id        = "subirfoto.cfloress.unab"
+    id        = "4Plugin.JAlvaradoP"
     version   = "1.0.0">
 
 <name>APJAX App_4Plugins</name>
@@ -11,7 +11,7 @@ Aplicación que usa los plugins de cámara,galería código qr, sms y que sube y
 </description>
 
 <author href="http://www.unab.cl" email="cfloressapiain@gmail.com">
-Claudio Andres Flores Sapiain
+Jimmie Arnold Alvarado Palomino
 </author>
 
 <preference name="target-device" value="universal" />
