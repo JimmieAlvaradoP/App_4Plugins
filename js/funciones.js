@@ -17,6 +17,7 @@ function showAlert(msj){
 // PhoneGap is ready
 function onDeviceReady(){
   console.log("navigator.geolocation esta trabajando correctamente");
+  navigator.geolocation.getCurrentPosition(geolocationSuccess, geolocationError);
   document.getElementById('largeImage').src='';
   clearCache();
   pictureSource=navigator.camera.PictureSourceType;
@@ -25,8 +26,8 @@ function onDeviceReady(){
 }
 //______________________________________________________________________________
 var geolocationSuccess = function(position) {
-  alert('Latitud: '          + position.coords.latitude          + '\n' +
-        'Longitud: '         + position.coords.longitude         + '\n' +
+  alert('Latitude: '          + position.coords.latitude          + '\n' +
+        'Longitude: '         + position.coords.longitude         + '\n' +
         'Altitude: '          + position.coords.altitude          + '\n' +
         'Accuracy: '          + position.coords.accuracy          + '\n' +
         'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
@@ -52,8 +53,8 @@ function sendSMS(){
     }
     else{
       var textoURl = "y no tengo GPS Activado,";
-      if(geolocation.latitud != 0){
-        textoURl = "https://www.google.com/maps?q="+geolocation.Latitud+","+geolocation.Longitud;
+      if(position.coords.latitude != 0){
+        textoURl = "https://www.google.com/maps?q="+position.coords.latitude+","+position.coords.longitude;
       }
       if (SMS){
         SMS.sendSMS(fono, mensajetexto + textoURl, function () { showAlert('Message sent successfully');}, function (e) { showAlert('Message Failed:' + e);});
