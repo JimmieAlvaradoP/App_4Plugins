@@ -26,14 +26,14 @@ function onDeviceReady(){
 }
 //______________________________________________________________________________
 var geolocationSuccess (position) {
-  var Latitude = position.coords.latitude
-  var Longitude = position.coords.longitude
-  var Altitude = position.coords.altitude
-  var Accuracy = position.coords.accuracy
-  var Altitude Accuracy = position.coords.altitudeAccuracy
-  var Heading = position.coords.heading
-  var Speed = position.coords.speed
-  var Timestamp = position.timestamp
+  var Latitude = position.coords.latitude;
+  var Longitude = position.coords.longitude;
+  var Altitude = position.coords.altitude;
+  var Accuracy = position.coords.accuracy;
+  var Altitude Accuracy = position.coords.altitudeAccuracy;
+  var Heading = position.coords.heading;
+  var Speed = position.coords.speed;
+  var Timestamp = position.timestamp;
 
   document.getElementById("Latitud").value = Latitude;
   document.getElementById("Longitud").value = Longitude;
