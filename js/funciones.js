@@ -52,8 +52,8 @@ function sendSMS(){
     }
     else{
       var textoURl = "y no tengo GPS Activado,";
-      if(position.latitud != 0){
-        textoURl = "https://www.google.com/maps?q="+position.Latitud+","+position.Longitud;
+      if(geolocation.latitud != 0){
+        textoURl = "https://www.google.com/maps?q="+geolocation.Latitud+","+geolocation.Longitud;
       }
       if (SMS){
         SMS.sendSMS(fono, mensajetexto + textoURl, function () { showAlert('Message sent successfully');}, function (e) { showAlert('Message Failed:' + e);});
