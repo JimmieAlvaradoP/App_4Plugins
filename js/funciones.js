@@ -2,10 +2,10 @@
 
 var pictureSource;   // picture source
 var destinationType; // sets the format of returned value
-var lat = '-33.4349083';
-var lon = '-70.6170132';
+//var latitud = '-33.4349083';
+//var longitud = '-70.6170132';
 document.addEventListener("deviceready", onDeviceReady, false);
-
+//______________________________________________________________________________
 function showAlert(msj){
   navigator.notification.alert(
     msj,  // message
@@ -16,23 +16,35 @@ function showAlert(msj){
 
 // PhoneGap is ready
 function onDeviceReady(){
-  // Do cool things here...
+  console.log("navigator.geolocation esta trabajando correctamente");
   document.getElementById('largeImage').src='';
   clearCache();
   pictureSource=navigator.camera.PictureSourceType;
   destinationType=navigator.camera.DestinationType;
   if (! SMS ) { alert( 'SMS plugin not ready' ); return; } //SMS
 }
-
-function clearCache(){
-  navigator.camera.cleanup();
+//______________________________________________________________________________
+var geolocationSuccess = function(position) {
+  alert('Latitud: '          + position.coords.latitude          + '\n' +
+        'Longitud: '         + position.coords.longitude         + '\n' +
+        'Altitude: '          + position.coords.altitude          + '\n' +
+        'Accuracy: '          + position.coords.accuracy          + '\n' +
+        'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+        'Heading: '           + position.coords.heading           + '\n' +
+        'Speed: '             + position.coords.speed             + '\n' +
+        'Timestamp: '         + position.timestamp                + '\n');
+};
+function geolocationError(error) {
+  alert('code: '    + error.code    + '\n' +
+        'message: ' + error.message + '\n');
 }
-
+navigator.geolocation.getCurrentPosition(geolocationSuccess, geolocationError);
+//______________________________________________________________________________
 function sendSMS(){
   var fono=document.getElementById('fono').value;
   var mensajetexto=document.getElementById('mensajetexto').value;
   if(fono==''){
-    showAlert('¡Debe Ingresar el Fono!');
+    showAlert('¡Debe Ingresar un numero de telefono!');
   }
   else{
     if(mensajetexto==""){
@@ -40,14 +52,18 @@ function sendSMS(){
     }
     else{
       var textoURl = "y no tengo GPS Activado,";
-      if(lat != 0){
-        textoURl = "https://www.google.com/maps?q="+lat+","+lon;
+      if(position.latitud != 0){
+        textoURl = "https://www.google.com/maps?q="+position.Latitud+","+position.Longitud;
       }
       if (SMS){
         SMS.sendSMS(fono, mensajetexto + textoURl, function () { showAlert('Message sent successfully');}, function (e) { showAlert('Message Failed:' + e);});
       }
     }
   }
+}
+//______________________________________________________________________________
+function clearCache(){
+  navigator.camera.cleanup();
 }
 
 function getImage(source){

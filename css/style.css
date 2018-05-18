@@ -61,7 +61,7 @@ nav:not(.mm-menu)
 	color: #fff;
 	line-height: 40px;
 	-moz-box-sizing: border-box;
-	box-sizing: border-box;	
+	box-sizing: border-box;
 	width: 100%;
 	height: 53px;
 	padding: 0 50px;
@@ -98,7 +98,7 @@ nav:not(.mm-menu)
 #menu
 {
 	width:100%;
-	
+
 }
 .menubusqueda
 {
@@ -148,7 +148,7 @@ nav:not(.mm-menu)
 .auspiciadores
 {
 	width: 100%;
-	
+
 }
 
 #iconhome
@@ -167,14 +167,14 @@ nav:not(.mm-menu)
 #icon
 {
 	width: 100%;
-	
+
 }
 
 #iconizqsup
 {
 	width: 100%;
 	border-radius: 30px 0 0 0;
-	
+
 }
 
 #iconderesup
@@ -204,7 +204,7 @@ nav:not(.mm-menu)
 #iconAUS
 {
 	width: 90%;
-	
+
 }
 
 #aus
@@ -236,7 +236,7 @@ nav:not(.mm-menu)
 #iconos
 {
 	width: 25%;
-	
+
 }
 
 #iconobarra
@@ -291,27 +291,27 @@ nav:not(.mm-menu)
 #principal
 {
 	background: url('../img/fondo-plomo.png');
-	
+
 }
 
 #subprincipal
 {
 	background: url('../img/wlaver-28.png');
 	height:8px;
-	
+
 }
 
 #contenedor
 {
-    
+
     width:100%;
     height:200px;
-    
+
     bottom:0px;
     z-index:10;
     text-align: center;
-    
-    
+
+
 }
 
 #indicador1
@@ -356,9 +356,9 @@ nav:not(.mm-menu)
 	width:30%;
 }
 
-.botonentrar 
+.botonentrar
 {
-	
+
 	background:#EDAE04;
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
 	-webkit-border-top-left-radius:6px;
@@ -385,12 +385,12 @@ nav:not(.mm-menu)
 	width:90%;
 	text-decoration:none;
 	text-align:center;
-	
+
 }
 
 /*P. Campanas*/
 
-.headerizquierdo 
+.headerizquierdo
 {
 	background: center center no-repeat;
 	display: block;
@@ -401,7 +401,7 @@ nav:not(.mm-menu)
 	z-index: 2;
 	right: 5%;
 }
-.headerline 
+.headerline
 {
 	background: center center no-repeat;
 	display: block;
@@ -414,7 +414,7 @@ nav:not(.mm-menu)
 }
 
 
-#icon1 
+#icon1
 {
 	width: 40px;
 	height: 40px;
@@ -426,7 +426,7 @@ nav:not(.mm-menu)
 	width:50%;
 }
 
-.botoncampanas 
+.botoncampanas
 {
 	background:#EDAE04;
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
@@ -518,8 +518,8 @@ nav:not(.mm-menu)
 
 .botonlugares
 {
-	
-	
+
+
 	background:#EDAE04;
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
 	-webkit-border-top-left-radius:6px;
@@ -550,10 +550,10 @@ nav:not(.mm-menu)
 }
 
 /*Pendientes*/
-.botonpendientes 
+.botonpendientes
 {
-	
-	
+
+
 	background: url('../iconos_barra/fondo_boton2.png');
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
 	-webkit-border-top-left-radius:6px;
@@ -624,7 +624,7 @@ nav:not(.mm-menu)
 
 .observacionproducto
 {
-	
+
 	background: #EDAE04;
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
 	-webkit-border-top-left-radius:6px;
@@ -656,7 +656,7 @@ nav:not(.mm-menu)
 
 
 
-form 
+form
 {
     width: 100%;
     font: normal bold 12px Verdana, Arial;
@@ -674,17 +674,17 @@ input , select , textarea
 	transition: box-shadow 0.3s, border 0.3s;
 	box-sizing: border-box;
 	margin-bottom: 20px;
-  	
+
 }
 
-#inputestado 
+#inputestado
 {
 	height:34px;
-  	
-  	
+
+
 }
 
-#textareatestado 
+#textareatestado
 {
 	height: 150px;
 
@@ -737,7 +737,7 @@ input , select , textarea
 
 #localesC
 {
-	
+
 	width:30%;
 }
 
