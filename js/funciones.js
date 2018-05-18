@@ -25,21 +25,23 @@ function onDeviceReady(){
   if (! SMS ) { alert( 'SMS plugin not ready' ); return; } //SMS
 }
 //______________________________________________________________________________
-var geolocationSuccess = function(position) {
-  alert('Latitude: '          + position.coords.latitude          + '\n' +
-        'Longitude: '         + position.coords.longitude         + '\n' +
-        'Altitude: '          + position.coords.altitude          + '\n' +
-        'Accuracy: '          + position.coords.accuracy          + '\n' +
-        'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
-        'Heading: '           + position.coords.heading           + '\n' +
-        'Speed: '             + position.coords.speed             + '\n' +
-        'Timestamp: '         + position.timestamp                + '\n');
+var geolocationSuccess (position) {
+  var Latitude = position.coords.latitude
+  var Longitude = position.coords.longitude
+  var Altitude = position.coords.altitude
+  var Accuracy = position.coords.accuracy
+  var Altitude Accuracy = position.coords.altitudeAccuracy
+  var Heading = position.coords.heading
+  var Speed = position.coords.speed
+  var Timestamp = position.timestamp
+
+  document.getElementById("Latitud").value = Latitude;
+  document.getElementById("Longitud").value = Longitude;
 };
 function geolocationError(error) {
   alert('code: '    + error.code    + '\n' +
         'message: ' + error.message + '\n');
 }
-navigator.geolocation.getCurrentPosition(geolocationSuccess, geolocationError);
 //______________________________________________________________________________
 function sendSMS(){
   var fono=document.getElementById('fono').value;
@@ -53,8 +55,8 @@ function sendSMS(){
     }
     else{
       var textoURl = "y no tengo GPS Activado,";
-      if(position.coords.latitude != 0){
-        textoURl = "https://www.google.com/maps?q="+position.coords.latitude+","+position.coords.longitude;
+      if(Latitud != 0){
+        textoURl = "https://www.google.com/maps?q="+Latitud+","+Longitud;
       }
       if (SMS){
         SMS.sendSMS(fono, mensajetexto + textoURl, function () { showAlert('Message sent successfully');}, function (e) { showAlert('Message Failed:' + e);});
