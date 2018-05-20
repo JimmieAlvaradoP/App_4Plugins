@@ -46,23 +46,6 @@ function onError(error) {
 }*/
 //______________________________________________________________________________
 function sendSMS(){
-  var onSuccess (position) {
-    Latitude = position.coords.latitude;
-    Longitude = position.coords.longitude;
-    Altitude = position.coords.altitude;
-    Accuracy = position.coords.accuracy;
-    Altitude Accuracy = position.coords.altitudeAccuracy;
-    Heading = position.coords.heading;
-    Speed = position.coords.speed;
-    Timestamp = position.timestamp;
-
-    Latitud = document.getElementById("Latitude").value;
-    Longitud = document.getElementById("Longitude").value;
-  };
-  function onError(error) {
-    alert('code: '    + error.code    + '\n' +
-          'message: ' + error.message + '\n');
-  }
   var fono=document.getElementById('fono').value;
   var mensajetexto=document.getElementById('mensajetexto').value;
   if(fono==''){
