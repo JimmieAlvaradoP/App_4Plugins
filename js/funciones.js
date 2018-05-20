@@ -35,8 +35,8 @@ var geolocationSuccess (position) {
   var Speed = position.coords.speed;
   var Timestamp = position.timestamp;
 
-  document.getElementById("Latitud").value = Latitude;
-  document.getElementById("Longitud").value = Longitude;
+  var Latitud = document.getElementById("Latitude").value;
+  var Longitud = document.getElementById("Longitude").value;
 };
 function geolocationError(error) {
   alert('code: '    + error.code    + '\n' +
