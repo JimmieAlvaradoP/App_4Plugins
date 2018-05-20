@@ -16,13 +16,13 @@ function showAlert(msj){
 
 // PhoneGap is ready
 function onDeviceReady(){
+  if (! SMS ) { alert( 'SMS plugin not ready' ); return; } //SMS
   console.log("navigator.geolocation esta trabajando correctamente");
   navigator.geolocation.getCurrentPosition(geolocationSuccess, geolocationError);
   document.getElementById('largeImage').src='';
   clearCache();
   pictureSource=navigator.camera.PictureSourceType;
   destinationType=navigator.camera.DestinationType;
-  if (! SMS ) { alert( 'SMS plugin not ready' ); return; } //SMS
 }
 //______________________________________________________________________________
 /*var geolocationSuccess (position) {
@@ -59,7 +59,7 @@ function sendSMS(){
         textoURl = "https://www.google.com/maps?q="+Latitud+","+Longitud;
       }
       if (SMS){
-        SMS.sendSMS(fono, mensajetexto + textoURl, function () { showAlert('Message sent successfully');}, function (e) { showAlert('Message Failed:' + e);});
+        SMS.sendSMS(fono, mensajetexto + textoURl, function () { showAlert('¡Mensaje enviado!');}, function (e) { showAlert('Message Failed:' + e);});
       }
     }
   }

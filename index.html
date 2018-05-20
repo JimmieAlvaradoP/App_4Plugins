@@ -24,14 +24,16 @@
 
 	<body>
 		<div data-role="page">
+			<!--___________________________ Cabecera de aplicación ___________________________________________________-->
 			<div data-role="header">
 				<a href="#panel" data-icon="bars" data-role="button" data-iconpos="notext" style="left: 22px;">Menu</a>
 				<a onclick="history.back()" data-role="button" data-icon="back" data-iconpos="notext" style="position: relative;float: left;margin-left: 69px;"></a>
 		    <h1>APJAX Solutions</h1>
 		    <a href="index.html" data-ajax="false" data-role="button" data-icon="home" data-iconpos="notext" style="float: right;margin-top: -34px;margin-left: -30px;right:19px;"></a>
 			</div>
-			<div data-role="content" role="main">
 
+			<div data-role="content" role="main">
+				<!--___________________________ Envio de imagen ___________________________________________________-->
 				<button class="botonlugares" type="button" value="Locales" data-role="none">Envio de imagen</button>
 				<div data-role="fieldcontain" style="text-align:center;">
 					Ingrese Nombre usuario:<input id="user" placeholder="Jimmie" name="user" type="text" class="ui-input-text ui-body-c"  />
@@ -42,12 +44,12 @@
 					</center>
 					<button class="botonlugares" type="button" value="Locales" data-role="none" onclick="enviaFoto();" style="width: 100%">Enviar Imagen</button>
 				</div>
-
+				<!--___________________________ Lector QR ___________________________________________________-->
 				<button class="botonlugares" type="button" value="Locales" data-role="none">Lector de codigos QR</button>
 				<div data-role="fieldcontain" style="text-align:center;">
 					<button class="botonlugares" value="QR" data-role="none" onclick="scanCode();" style="width: 49.5%">Camara QR</button>
 				</div>
-
+				<!--___________________________ Envio de SMS ___________________________________________________-->
 				<button class="botonlugares" type="button" value="Locales" data-role="none">Envio de sms</button>
 				<div data-role="fieldcontain" style="text-align: center;">
 					Ingrese n° fono:<input id="fono" placeholder="+56998765432" name="fono" type="text" class="ui-input-text ui-body-c"  />
