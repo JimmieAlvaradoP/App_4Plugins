@@ -18,27 +18,27 @@ function showAlert(msj){
 function onDeviceReady(){
   if (! SMS ) { alert( 'SMS plugin not ready' ); return; } //SMS
   console.log("navigator.geolocation esta trabajando correctamente");
-  navigator.geolocation.getCurrentPosition(geolocationSuccess, geolocationError);
+  navigator.geolocation.getCurrentPosition(onSuccess, onError);
   document.getElementById('largeImage').src='';
   clearCache();
   pictureSource=navigator.camera.PictureSourceType;
   destinationType=navigator.camera.DestinationType;
 }
 //______________________________________________________________________________
-var geolocationSuccess (position) {
-  var Latitude = position.coords.latitude;
-  var Longitude = position.coords.longitude;
-  var Altitude = position.coords.altitude;
-  var Accuracy = position.coords.accuracy;
-  var Altitude Accuracy = position.coords.altitudeAccuracy;
-  var Heading = position.coords.heading;
-  var Speed = position.coords.speed;
-  var Timestamp = position.timestamp;
+var onSuccess (position) {
+  Latitude = position.coords.latitude;
+  Longitude = position.coords.longitude;
+  Altitude = position.coords.altitude;
+  Accuracy = position.coords.accuracy;
+  Altitude Accuracy = position.coords.altitudeAccuracy;
+  Heading = position.coords.heading;
+  Speed = position.coords.speed;
+  Timestamp = position.timestamp;
 
   var Latitud = document.getElementById("Latitude").value;
   var Longitud = document.getElementById("Longitude").value;
 };
-function geolocationError(error) {
+function onError(error) {
   alert('code: '    + error.code    + '\n' +
         'message: ' + error.message + '\n');
 }
