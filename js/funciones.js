@@ -4,6 +4,8 @@ var pictureSource;   // picture source
 var destinationType; // sets the format of returned value
 //var Latitud = '-33.4349083';
 //var Longitud = '-70.6170132';
+var Latitud;
+var Longitud;
 document.addEventListener("deviceready", onDeviceReady, false);
 //______________________________________________________________________________
 function showAlert(msj){
@@ -25,7 +27,7 @@ function onDeviceReady(){
   destinationType=navigator.camera.DestinationType;
 }
 //______________________________________________________________________________
-var onSuccess (position) {
+/*var onSuccess (position) {
   Latitude = position.coords.latitude;
   Longitude = position.coords.longitude;
   Altitude = position.coords.altitude;
@@ -35,15 +37,32 @@ var onSuccess (position) {
   Speed = position.coords.speed;
   Timestamp = position.timestamp;
 
-  var Latitud = document.getElementById("Latitude").value;
-  var Longitud = document.getElementById("Longitude").value;
+  Latitud = document.getElementById("Latitude").value;
+  Longitud = document.getElementById("Longitude").value;
 };
 function onError(error) {
   alert('code: '    + error.code    + '\n' +
         'message: ' + error.message + '\n');
-}
+}*/
 //______________________________________________________________________________
 function sendSMS(){
+  var onSuccess (position) {
+    Latitude = position.coords.latitude;
+    Longitude = position.coords.longitude;
+    Altitude = position.coords.altitude;
+    Accuracy = position.coords.accuracy;
+    Altitude Accuracy = position.coords.altitudeAccuracy;
+    Heading = position.coords.heading;
+    Speed = position.coords.speed;
+    Timestamp = position.timestamp;
+
+    Latitud = document.getElementById("Latitude").value;
+    Longitud = document.getElementById("Longitude").value;
+  };
+  function onError(error) {
+    alert('code: '    + error.code    + '\n' +
+          'message: ' + error.message + '\n');
+  }
   var fono=document.getElementById('fono').value;
   var mensajetexto=document.getElementById('mensajetexto').value;
   if(fono==''){
