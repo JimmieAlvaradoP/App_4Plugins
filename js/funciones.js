@@ -2,8 +2,8 @@
 
 var pictureSource;   // picture source
 var destinationType; // sets the format of returned value
-var latitud = '-33.4349083';
-var longitud = '-70.6170132';
+var Latitud = '-33.4349083';
+var Longitud = '-70.6170132';
 document.addEventListener("deviceready", onDeviceReady, false);
 //______________________________________________________________________________
 function showAlert(msj){
