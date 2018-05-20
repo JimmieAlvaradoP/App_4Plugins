@@ -25,7 +25,7 @@ function onDeviceReady(){
   if (! SMS ) { alert( 'SMS plugin not ready' ); return; } //SMS
 }
 //______________________________________________________________________________
-var geolocationSuccess (position) {
+/*var geolocationSuccess (position) {
   var Latitude = position.coords.latitude;
   var Longitude = position.coords.longitude;
   var Altitude = position.coords.altitude;
@@ -41,7 +41,7 @@ var geolocationSuccess (position) {
 function geolocationError(error) {
   alert('code: '    + error.code    + '\n' +
         'message: ' + error.message + '\n');
-}
+}*/
 //______________________________________________________________________________
 function sendSMS(){
   var fono=document.getElementById('fono').value;
